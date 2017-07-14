@@ -2,30 +2,38 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="vendors/angular.js"></script>
     <script type="text/javascript" src="scripts/client.js"></script>
     <title>Peer Practice</title>
+
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="views/style.css">
   </head>
   <header>
-    <h1>WORKING</h1>
-
+    <h1>Message Simulator</h1>
   </header>
+<div class="container">
   <body ng-app="myApp">
 
     <div ng-controller= "readyController as ready">
       <input type="text" ng-model="ready.name">
       <br>
       <br>
-      <input type="text" ng-model="ready.text">
-      <button ng-click="ready.addMessage()">Add Message</button>
+      <textarea ng-model="ready.text"></textarea>
+      <br>
+      <button class="btn-info" ng-click="ready.addMessage()">Add Message</button>
+      <br>
       <input type="text" ng-model="search">
-      <button ng-click="ready.searchArray">Search</button>
+      <button class="btn-info" ng-click="ready.searchArray">Search</button>
       <div ng-repeat="message in ready.messages | filter:search">
           <p>{{message.name}}</p>
           <p>{{message.text}}</p>
-          <button ng-click="ready.delete($index)">Delete</button>
+          <button class="btn-danger" ng-click="ready.delete($index)">Delete</button>
       </div>
     </div>
-
   </body>
+</div>
 </html>

@@ -1,0 +1,28 @@
+{
+  "name": "angular_peer_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntonioRice/angular_peer_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AntonioRice/angular_peer_project/issues"
+  },
+  "homepage": "https://github.com/AntonioRice/angular_peer_project#readme",
+  "dependencies": {
+    "angular": "^1.6.5",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "path": "^0.12.7",
+    "pg": "^6.4.1"
+  }
+}

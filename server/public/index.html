@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="vendors/angular.js"></script>
+    <script type="text/javascript" src="scripts/client.js"></script>
+    <title>Peer Practice</title>
+  </head>
+  <header>
+    <h1>WORKING</h1>
+
+  </header>
+  <body ng-app="myApp">
+
+    <div ng-controller= "readyController as ready">
+      <input type="text" ng-model="ready.name">
+      <br>
+      <br>
+      <input type="text" ng-model="ready.text">
+      <button ng-click="ready.addMessage()">Add Message</button>
+      <div ng-repeat="message in ready.messages">
+        <p>{{message.name}}</p>
+        <p>{{message.text}}</p>
+      </div>
+    </div>
+
+
+
+  </body>
+</html>
